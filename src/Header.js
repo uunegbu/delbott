@@ -2,6 +2,7 @@ import React from "react";
 import "./Header.css";
 import delbottlogo from "./delbott-blue.png";
 import SearchIcon from "@mui/icons-material/Search";
+import ShoppingBasketIcon from "@mui/icons-material/ShoppingBasket";
 function Header() {
   return (
     <div className="header">
@@ -22,6 +23,10 @@ function Header() {
         <div className="header_options">
           <span className="header_optionLineone">Your</span>
           <span className="header_optionLinetwo">Prime</span>
+        </div>
+        <div className="header_optionBasket">
+          <ShoppingBasketIcon />
+          <span className="header_optionLinetwo header_basketCount">0</span>
         </div>
       </div>
     </div>
