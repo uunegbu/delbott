@@ -3,10 +3,14 @@ import "./Header.css";
 import delbottlogo from "./delbott-blue.png";
 import SearchIcon from "@mui/icons-material/Search";
 import ShoppingBasketIcon from "@mui/icons-material/ShoppingBasket";
+import { Link } from "react-router-dom";
 function Header() {
   return (
     <div className="header">
-      <img className="header_logo" src={delbottlogo} alt="Logo" />
+      <Link to={"/"}>
+        <img className="header_logo" src={delbottlogo} alt="Logo" />
+      </Link>
+
       <div className="header_search">
         <input className="header_searchInput" type="text" />
         <SearchIcon className="header_searchIcon" />
@@ -24,10 +28,12 @@ function Header() {
           <span className="header_optionLineone">Your</span>
           <span className="header_optionLinetwo">Prime</span>
         </div>
-        <div className="header_optionBasket">
-          <ShoppingBasketIcon />
-          <span className="header_optionLinetwo header_basketCount">0</span>
-        </div>
+        <Link to={"/checkout"}>
+          <div className="header_optionBasket">
+            <ShoppingBasketIcon />
+            <span className="header_optionLinetwo header_basketCount">0</span>
+          </div>
+        </Link>
       </div>
     </div>
   );

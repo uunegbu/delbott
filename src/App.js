@@ -3,6 +3,7 @@ import Header from "./Header.js";
 import Home from "./Home.js";
 import Product from "./Product.js";
 import Checkout from "./Checkout.js";
+import Subtotal from "./Subtotal.js";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 function App() {
   return (
